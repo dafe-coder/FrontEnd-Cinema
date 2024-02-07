@@ -14,9 +14,11 @@ const Menu: FC<MenuProps> = ({ menu: { items, title } }) => {
 		<div className={styles.menu}>
 			<div className={styles.heading}>{title}</div>
 			<ul>
-				{items.map((itemMenu) => (
-					<MenuItem key={itemMenu.link} {...itemMenu} />
-				))}
+				{items?.length > 0
+					? items.map((itemMenu) => (
+							<MenuItem key={itemMenu.link} {...itemMenu} />
+						))
+					: null}
 				{title === 'General' ? <AuthItems /> : null}
 			</ul>
 		</div>

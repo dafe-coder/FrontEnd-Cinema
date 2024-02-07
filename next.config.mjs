@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: false,
-	poweredByHead: false,
 	optimizeFonts: false,
 	env: {
 		APP_URL: process.env.REACT_APP_API,
