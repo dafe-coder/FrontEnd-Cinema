@@ -1,8 +1,8 @@
 'use client'
 
-import Layout from './components/layouts/Layout'
-import Home from './components/screens/home/Home'
-import MainProvider from './providers/MainProvider'
+import Layout from '../src/components/layouts/Layout'
+import Home from '../src/components/screens/home/Home'
+import MainProvider from '../src/providers/MainProvider'
 
 export default function HomePage() {
 	return (

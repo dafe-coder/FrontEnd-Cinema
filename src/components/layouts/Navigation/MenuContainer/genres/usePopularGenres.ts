@@ -1,10 +1,8 @@
 import { useQuery } from 'react-query'
 
-import { getGenreUrl } from '@/config/url.config'
-
+import { getGenreUrl } from '../../../../../config/url.config'
+import { GenresService } from '../../../../../services/genres.service'
 import { IMenuItem } from '../menu.interface'
-
-import { GenresService } from '@/services/genres.service'
 
 export const usePopularGenres = () => {
 	const { isLoading, data } = useQuery(
