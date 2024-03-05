@@ -1,17 +1,15 @@
 import { FC } from 'react'
 
-import Meta from '../../../utils/meta/Meta'
+import { Heading } from '@/components/ui/'
 
 import { IHome } from './home.interface'
 
 const Home: FC<IHome> = () => {
 	return (
-		<Meta
+		<Heading
 			title="Watch movies online"
-			description="Watch MovieApp and TV shows online"
-		>
-			<h1>Home</h1>
-		</Meta>
+			className="text-gray-300 mb-8 text-xl"
+		/>
 	)
 }
 

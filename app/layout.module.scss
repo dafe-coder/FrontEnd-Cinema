@@ -1,7 +1,7 @@
 $bar-width: 20%;
 
 .layout {
-	@apply relative;
+	@apply min-h-screen relative;
 
 	> div:first-child,
 	> div:last-child {
@@ -19,7 +19,7 @@ $bar-width: 20%;
 	}
 
 	.main {
-		@apply min-h-screen p-layout;
+		@apply p-layout;
 		margin: 0 $bar-width;
 	}
 }
