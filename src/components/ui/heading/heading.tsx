@@ -11,7 +11,7 @@ export const Heading: FC<IHeading> = ({ title, className, ...props }) => {
 			className={`text-white text-opacity-80 font-semibold ${className?.includes('xl') ? '' : 'text-3xl'} ${className}`}
 			{...props}
 		>
-			Heading
+			{title}
 		</div>
 	)
 }

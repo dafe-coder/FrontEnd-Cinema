@@ -5,9 +5,15 @@ import { getMoviesUrl } from '@/config/api.config'
 import { axiosClassic } from '@/api/interceptors'
 
 export const MovieService = {
-	getAll(searchTerm?: string) {
-		return axiosClassic.get<IMovie[]>(getMoviesUrl(''), {
+	async getAll(searchTerm?: string) {
+		return await axiosClassic.get<IMovie[]>(getMoviesUrl(''), {
 			params: searchTerm ? { searchTerm } : {},
 		})
+	},
+	async getMostPopularMovies() {
+		const { data: movies } = await axiosClassic.get<IMovie[]>(
+			getMoviesUrl('/most-popular')
+		)
+		return movies
 	},
 }
