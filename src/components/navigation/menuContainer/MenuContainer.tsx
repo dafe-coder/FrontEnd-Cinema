@@ -3,15 +3,15 @@ import { FC } from 'react'
 import Menu from './Menu'
 import GenreMenu from './genres/GenreMenu'
 import { firstMenu, userMenu } from './menu.data'
-import MainProvider from '@/providers/MainProvider'
+import QueryProvider from '@/providers/QueryProvider'
 
 const MenuContainer: FC = () => {
 	return (
 		<div>
 			<Menu menu={firstMenu} />
-			<MainProvider>
+			<QueryProvider>
 				<GenreMenu />
-			</MainProvider>
+			</QueryProvider>
 			<Menu menu={userMenu} />
 		</div>
 	)
