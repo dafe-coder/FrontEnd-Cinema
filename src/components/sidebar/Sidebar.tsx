@@ -4,7 +4,7 @@ import { FC } from 'react'
 import { toast } from 'react-toastify'
 
 import { MoviesContainer } from '../sidebar/moviesContainer/moviesContainer'
-import ReduxToast from '../ui/toast/toast'
+import Toast from '../ui/toast/toast'
 
 import { Search } from './search/search'
 import styles from './sidebar.module.scss'
@@ -20,7 +20,7 @@ export const Sidebar: FC = () => {
 				<MoviesContainer />
 			</QueryProvider>
 			<MainProvider>
-				<ReduxToast />
+				<Toast />
 				<button className="btn-primary" onClick={notify}>
 					Click
 				</button>
