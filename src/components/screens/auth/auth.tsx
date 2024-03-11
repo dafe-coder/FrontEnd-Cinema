@@ -6,6 +6,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { Button } from '@/ui/formElements/button'
 import { Heading } from '@/ui/heading/heading'
 
+import { useActions } from '@/hooks/useActions'
 import { useAuth } from '@/hooks/useAuth'
 
 import { AuthFields } from '../../ui/formElements/authFields'
@@ -18,6 +19,7 @@ export const Auth: FC = () => {
 	// useAuthRedirect()
 	const { isLoading } = useAuth()
 	const [type, setType] = useState<'login' | 'register'>('login')
+	const { register, login } = useActions()
 
 	const {
 		register: registerInput,
@@ -27,13 +29,6 @@ export const Auth: FC = () => {
 	} = useForm<IAuthInput>({
 		mode: 'onChange',
 	})
-
-	const login = (data: any) => {
-		console.table(data)
-	}
-	const register = (data: any) => {
-		console.table(`Register ${data}`)
-	}
 
 	const onSubmit: SubmitHandler<IAuthInput> = (data) => {
 		if (type === 'login') {

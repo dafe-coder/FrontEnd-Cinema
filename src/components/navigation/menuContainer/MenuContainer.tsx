@@ -4,6 +4,7 @@ import Menu from './Menu'
 import GenreMenu from './genres/GenreMenu'
 import { firstMenu, userMenu } from './menu.data'
 import QueryProvider from '@/providers/QueryProvider'
+import StoreProvider from '@/providers/StoreProvider'
 
 const MenuContainer: FC = () => {
 	return (
@@ -12,7 +13,9 @@ const MenuContainer: FC = () => {
 			<QueryProvider>
 				<GenreMenu />
 			</QueryProvider>
-			<Menu menu={userMenu} />
+			<StoreProvider>
+				<Menu menu={userMenu} />
+			</StoreProvider>
 		</div>
 	)
 }

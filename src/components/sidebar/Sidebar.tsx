@@ -8,8 +8,8 @@ import Toast from '../ui/toast/toast'
 
 import { Search } from './search/search'
 import styles from './sidebar.module.scss'
-import MainProvider from '@/providers/MainProvider'
 import QueryProvider from '@/providers/QueryProvider'
+import MainProvider from '@/providers/StoreProvider'
 
 export const Sidebar: FC = () => {
 	const notify = () => toast('Wow so easy!')

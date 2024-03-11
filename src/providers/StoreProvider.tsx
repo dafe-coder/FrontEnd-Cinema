@@ -1,10 +1,12 @@
+'use client'
+
 import { FC, PropsWithChildren } from 'react'
 import React from 'react'
 import { Provider } from 'react-redux'
 
 import { store } from '@/store/store'
 
-const QueryProvider: FC<PropsWithChildren> = ({ children }) => {
+const StoreProvider: FC<PropsWithChildren> = ({ children }) => {
 	return <Provider store={store}>{children}</Provider>
 }
-export default QueryProvider
+export default StoreProvider
